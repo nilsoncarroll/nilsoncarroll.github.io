@@ -60,3 +60,16 @@ li a:hover {
   width: 100%;
   max-width: 450px;
 }
+
+.about {
+    background-image: url("images/screenshot_007.jpg");
+        background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+
+
+
+
+
+
