@@ -63,6 +63,7 @@ li a {
     text-decoration: none;
 }
 
+
 li a:hover {
     background-color: #111;
 }
@@ -85,6 +86,11 @@ li a:hover {
     background-attachment: fixed;
     background-position: bottom;
 }
+
+   @media (max-width: 480px) {
+    li a {
+	    font-size: 30px;
+	}
 
 
 
