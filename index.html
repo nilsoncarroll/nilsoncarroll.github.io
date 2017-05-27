@@ -24,7 +24,14 @@
 }
 </style>
     
-<script src="/lib/w3.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("body").toggleClass("marked");
+    });
+});
+</script>
     
 
 
@@ -53,6 +60,6 @@
 </ul>
     <img src="images/Screenshot_002.gif" class="responsive-image"><br /><br /><br />
     
-<button onclick="w3.toggleClass('body','marked')">Toggle Class</button>
+    <button>Toggle class "main" for p elements</button>
 </body>
 </html>
