@@ -56,17 +56,18 @@ li {
 
 li a {
     display: block;
-     color: #e88888;
+    color: #e88888;
     font-size: 11px;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-
+/*
 li a:hover {
-    background-color: #111;
+    background-color: #9d93f6;
 }
+*/
 
 .responsive-image {
   height: auto;
