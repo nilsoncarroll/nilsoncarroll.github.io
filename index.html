@@ -18,17 +18,38 @@
     }
     
     .marked {
-    background-color: orange;
+    background-color: aliceblue;
     font-size: 30px;
     color: white;
 }
+    
+        .marked2 {
+    background-color: lightpink;
+    font-size: 30px;
+    color: white;
+    }
+    
+    .butt1 {
+        
+    }
+    
+    .butt2 {
+        
+    }
+            
 </style>
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    $("button").click(function(){
+    $(".butt1").click(function(){
         $("body").toggleClass("marked");
+    });
+});
+    
+    $(document).ready(function(){
+    $(".butt2").click(function(){
+        $("body").toggleClass("marked2");
     });
 });
 </script>
@@ -60,6 +81,8 @@ $(document).ready(function(){
 </ul>
     <img src="images/Screenshot_002.gif" class="responsive-image"><br /><br /><br />
     
-    <button style="background: url(images/Screenshot_002.gif)"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br /></button>
+    <button class="butt1" style="background: url(images/Screenshot_002.gif)"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br /></button>
+    
+        <button class="butt2" style="background: url(images/Screenshot_002.gif)"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br /></button>
 </body>
 </html>
