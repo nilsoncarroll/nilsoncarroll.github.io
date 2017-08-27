@@ -27,6 +27,27 @@ p {
       color: #0f380e;  
     } 
     
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+p:hover .tooltiptext {
+    visibility: visible;
+    }
+    
 .table {
     display: table;
     max-width: 40%;
@@ -98,7 +119,7 @@ img {
     <div class="table">
 
  <p>
-    1. EarthBound (SNES, 1995)
+    1. EarthBound (SNES, 1995)<span class="tooltiptext">gdrsghonaoga</span>
 </p>
 <p>
     2. Chrono Trigger (SNES, 1995)
