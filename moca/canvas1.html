@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+canvas {
+    border:1px dotted #d3d3d3;
+    background-color: black;
+}
+    
+.monster {
+  width: 190px;
+  height: 240px;
+  margin: 2% auto;
+  background: url('https://treehouse-code-samples.s3.amazonaws.com/CSS-DD/codepen/blog/monster.png') left center;
+  animation: play .8s steps(10) infinite;
+}
+
+@keyframes play {
+    100% { background-position: -1900px; }
+}    
+    
+</style>
+</head>
+<body onload="startGame()">
+<script>
+
+var myGamePiece;
+
+function startGame() {
+    myGameArea.start();
+    myGamePiece = new component(10, 10, "us1.gif", 390, 1760, "image");
+    myBackground = new component(2550, 3300, "Scan.jpeg", 0, 0, "image");
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 2550;
+        this.canvas.height = 3300;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.interval = setInterval(updateGameArea, 20);
+        window.addEventListener('keydown', function (e) {
+            myGameArea.keys = (myGameArea.keys || []);
+            myGameArea.keys[e.keyCode] = (e.type == "keydown");
+        })
+        window.addEventListener('keyup', function (e) {
+            myGameArea.keys[e.keyCode] = (e.type == "keydown");            
+        })
+    }, 
+    clear : function(){
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+}
+
+
+
+var coinImage = new Image();
+coinImage.src = "coin-sprite-animation.png";
+
+    
+    
+function component(width, height, color, x, y, type) {
+    this.type = type;
+    if (type == "image") {
+        this.image = new Image();
+        this.image.src = color;
+    }
+    this.width = width;
+    this.height = height;
+    this.speedX = 0;
+    this.speedY = 0;    
+    this.x = x;
+    this.y = y;    
+    this.update = function() {
+        ctx = myGameArea.context;
+        if (type == "image") {
+            ctx.drawImage(this.image, 
+                this.x, 
+                this.y,
+                this.width, this.height);
+        } else {
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+    this.newPos = function() {
+        this.x += this.speedX;
+        this.y += this.speedY;        
+    }
+}
+
+function updateGameArea() {
+    myGameArea.clear();
+    myBackground.newPos();    
+    myBackground.update();
+    myGamePiece.speedX = 0;
+    myGamePiece.speedY = 0;    
+    if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.speedX = -2; }
+    if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.speedX =2; }
+    if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speedY = -2; }
+    if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speedY = 2; }
+    myGamePiece.newPos();    
+    myGamePiece.update();
+}
+    
+function move(dir) {
+    myGamePiece.image.src = "us2.gif";
+    if (dir == "up") {myGamePiece.speedY = -1; }
+    if (dir == "down") {myGamePiece.speedY = 1; }
+    if (dir == "left") {myGamePiece.speedX = -1; }
+    if (dir == "right") {myGamePiece.speedX = 1; }
+}
+
+function clearmove() {
+    myGamePiece.image.src = "us1.gif";
+    myGamePiece.speedX = 0; 
+    myGamePiece.speedY = 0; 
+}
+    
+
+    
+</script>
+    <p>Make sure this window has focus, then please explore rygar to the fullest extent! !</p>
+    <div class="monster"></div>
+    <audio src="lagrange.mp3" autoplay loop>
+</body>
+</html>
