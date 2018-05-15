@@ -81,6 +81,13 @@ li a:hover {
   max-width: 580px;
 }
 
+.responsive-image3 {
+  height: auto;
+  width: 75%;
+  max-width: 580px;
+  align-content: center;
+}
+
 .about {
     <!-- background-image: url("images/screenshot_007.jpg"); -->
         background-repeat: no-repeat;
