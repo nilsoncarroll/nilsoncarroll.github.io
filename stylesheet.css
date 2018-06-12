@@ -88,6 +88,13 @@ li a:hover {
   align-content: center;
 }
 
+.responsive-image4 {
+  height: auto;
+  width: 100%;
+  max-width: 580px;
+  align-content: center;
+}
+
 .about {
     <!-- background-image: url("images/screenshot_007.jpg"); -->
         background-repeat: no-repeat;
