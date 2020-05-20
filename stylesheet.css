@@ -95,6 +95,12 @@ li a:hover {
   align-content: center;
 }
 
+.responsive-image5 {
+  height: auto;
+  width: 100%;
+  align-content: center;
+}
+
 .about {
     <!-- background-image: url("images/screenshot_007.jpg"); -->
         background-repeat: no-repeat;
