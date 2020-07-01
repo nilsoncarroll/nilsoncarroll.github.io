@@ -113,3 +113,10 @@ li a:hover {
 	    font-size: 30px;
         line-height:115%;
 	}
+       
+       @font-face {
+font-family: "Dragon Warrior III";
+src: url("../font/dragon-warrior-iii.ttf");
+src:
+url("../font/dragon-warrior-iii-webfont.woff") format("woff"),
+}
