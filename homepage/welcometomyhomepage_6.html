@@ -19,6 +19,21 @@
         background-size: 5% 4%;
     }
     
+    @media screen and (max-width: 600px) {
+    .image {
+        width: 100%;
+        height: auto;
+    }
+}
+    
+@media screen and (min-width: 601px) {
+    .image {
+        width: 33%;
+        height: auto;
+    }
+}
+    
+    
     p {
 font-family: 'Dragon Warrior III', Arial, sans-serif;
 font-weight:normal;
@@ -178,7 +193,7 @@ $(document).ready(function(){
 
 <div align="center">
     <a href="../homepage/info.html"><p>MENU</p></a><br><br>
- <img src="../images/wmhp/dq4_17.gif" height="450px" width="auto"><br><br><br>
+ <img src="../images/wmhp/dq4_17.gif" class="image"><br><br><br>
     <p>'It's my fault you never learned the plow.'<br>'It's my fault you never learned the prayer.' <br>You stare down at your limp body, nodding. <br><br>
         'I leave unto thee these <a href="welcometomyhomepage_9.html">three pilfered emblems</a>:<br>hydra's syrup, lora's Luv, <br>and my own bronze cast Ass Masque.'
 
