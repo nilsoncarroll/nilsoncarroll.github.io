@@ -24,6 +24,20 @@ font-style:normal;
 color: white;
 }
     
+        @media screen and (max-width: 600px) {
+    .image {
+        width: 100%;
+        height: auto;
+    }
+}
+    
+@media screen and (min-width: 601px) {
+    .image {
+        width: 33%;
+        height: auto;
+    }
+}
+    
         a {
 font-family: 'Dragon Warrior III', Arial, sans-serif;
 font-weight:normal;
@@ -175,7 +189,7 @@ $(document).ready(function(){
 
 <div align="center">
     <a href="homepage/info.html"><p>MENU</p></a><br><br>
- <img src="images/dq3glitch1.png" height="450px" width="auto">
+ <img src="images/dq3glitch1.png" class="image">
     <p>'Welcome home, Nilson.'<br>'It's been a long journey.'<br><br>You go back to <a href="homepage/welcometomyhomepage_1.html">sleep</a>.</p>
 
                  </table></div>
