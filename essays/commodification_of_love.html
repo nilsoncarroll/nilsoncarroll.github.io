@@ -104,6 +104,23 @@
 
 }
     
+    
+.myIframe {
+     position: relative;
+     padding-bottom: 65.25%;
+     padding-top: 30px;
+     height: 0;
+     overflow: auto; 
+     -webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY 
+     border: solid black 1px;
+} 
+.myIframe iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+}
 
 </style>
 </head>
@@ -154,7 +171,8 @@
     <div class="table-row">
 <div class="table-cell2">
         <p>     
-            <iframe width="600" height="330" src="https://www.youtube.com/embed/iaEkzwG6aoE?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+    <div class="myIframe">  <iframe width="600" height="330" src="https://www.youtube.com/embed/iaEkzwG6aoE?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></p>
+        <p>
 My name is Nilson Carroll. I’m an MFA thesis candidate at Visual Studies Workshop in Rochester New York, where I’ve been studying film, new media, and performance art, with a concentration in making and writing about queer games and game experiences.
 <br><br>
 Video games deal with exchanges between player, game, and game maker. Often these exchanges are aestheticized with violence, but sometimes not. Dating sims are unique in that their exchanges are concerned with love, romance, and sex involving the player, the player character, the game’s characters, and the game’s systems.
