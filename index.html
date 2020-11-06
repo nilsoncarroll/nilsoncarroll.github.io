@@ -16,12 +16,19 @@
 	   font-weight: 400;
 	   line-height: 20px;
     }
+    
 
     .row {
     align-content: center;
     margin:auto;
     display:block;
     }
+    
+    img {
+  height: 50%;
+  width: 118%;
+
+}
 
     .marked {
     background-color: #e88888;
@@ -149,6 +156,35 @@ $(document).ready(function(){
     });
 });
 </script>
+    
+<script type="text/javascript">
+  var imageUrls = [
+       "http://nilsoncarroll.com/images/b/band1.gif"
+     , "http://nilsoncarroll.com/images/b/band2.gif"
+     , "http://nilsoncarroll.com/images/b/band3.gif"
+     , "http://nilsoncarroll.com/images/b/band6.gif"
+     , "http://nilsoncarroll.com/images/b/band1.gif"
+     , "http://nilsoncarroll.com/images/b/band2.gif"
+     , "http://nilsoncarroll.com/images/b/band3.gif"
+  ];
+ var imageLinks = [
+       "https://nilsoncarroll.com/homepage/welcometomyhomepage_3.html"
+      , "https://vimeo.com/341098823"
+       , "https://nilson.itch.io/flamingmillion"
+      , "https://vimeo.com/300338290" 
+     , "https://nilsoncarroll.com/homepage/welcometomyhomepage_3.html"
+     , "https://vimeo.com/341098823"
+     , "https://nilson.itch.io/flamingmillion"
+  ];
+
+  function getImageHtmlCode() {
+    var dataIndex = Math.floor(Math.random() * imageUrls.length);
+    var img = '<a href=\"' + imageLinks[dataIndex] + '"><img src="';       
+    img += imageUrls[dataIndex];
+    img += '\" alt=\"its broken like me"/></a>';
+    return img;
+  }
+</script>
 
 <link href="http://nilsoncarroll.com/apple-touch-icon.png" rel="apple-touch-icon" />
 
@@ -192,7 +228,13 @@ $(document).ready(function(){
  </tr>
 
                  </table></div>
-
+    <br><br><br><br><br><br><br>
+    
+<div style="max-width:450px; display: block;">
+<script type="text/javascript">
+  document.write(getImageHtmlCode());
+    </script></div>
+    
 <p style="color: #0f3800">nilson carroll ~ 2020</p>
 </body>
 </html>
